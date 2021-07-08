@@ -1,0 +1,269 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+*::after, *::before{
+    box-sizing: inherit;
+}
+
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --vdark_gray: rgb(76, 78, 97);
+    --grayish_blue: hsl(229, 6%, 66%);
+    --vlight_gray: hsl(0, 0%, 98%); 
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 65px 0;
+
+}
+
+.header :nth-child(1){
+    font-weight: 200;
+    color: var(--vdark_gray);
+    margin-bottom: 0;
+}
+
+.header :nth-child(2){
+    font-weight: 600;
+    color: var(--vdark_gray);
+}
+
+.header p{
+    width: 18.75rem;
+    margin: 0 auto;
+    color: var(--grayish_blue);
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/*the four boxes*/
+.big_box{
+    width: 100%;
+    height: 67.5rem;
+    padding: 20px;
+}
+
+.big_box :not(:last-child){
+    margin-bottom: 30px;
+}
+
+.box1{
+    position: relative;
+    width: 20rem;
+    height: 16.25rem;
+    border-top: 5px solid var(--cyan);
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px 5px rgba(76, 78, 97, 0.2);
+    padding: 1.7rem;
+    margin: auto;
+}
+
+.box1 :nth-child(1){
+    margin: 0;
+}
+
+.box1 :nth-child(2){
+    font-weight: 200;
+    font-size: 15px;
+    color: var(--grayish_blue);
+    width: 16.875rem; /*270px;*/
+    margin: 0px;
+}
+
+.box1 :nth-child(3){
+    position:absolute;
+    right: 30px;
+    top: 170px;
+}
+
+.box2{
+    position: relative;
+    width: 20rem;
+    height: 16.25rem;
+    border-top: 5px solid var(--red);
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px 5px rgba(76, 78, 97, 0.2);
+    padding: 1.7rem;
+    margin: auto;
+}
+
+.box2 :nth-child(1){
+    margin: 0;
+}
+
+.box2 :nth-child(2){
+    font-weight: 200;
+    font-size: 15px;
+    color: var(--grayish_blue);
+    width: 16.875rem; /*270px;*/
+    margin: 0px;
+}
+
+.box2 :nth-child(3){
+    position:absolute;
+    right: 30px;
+    top: 170px;
+}
+
+.box3{
+    position: relative;
+    width: 20rem;
+    height: 16.25rem;
+    border-top: 5px solid var(--orange);
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px 5px rgba(76, 78, 97, 0.2);
+    padding: 1.7rem;
+    margin: auto;
+}
+
+.box3 :nth-child(1){
+    margin: 0;
+}
+
+.box3 :nth-child(2){
+    font-weight: 200;
+    font-size: 15px;
+    color: var(--grayish_blue);
+    width: 16.875rem; /*270px;*/
+    margin: 0px;
+}
+
+.box3 :nth-child(3){
+    position:absolute;
+    right: 30px;
+    top: 170px;
+}
+
+.box4{
+    position: relative;
+    width: 20rem;
+    height: 16.25rem;
+    border-top: 5px solid var(--blue);
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px 5px rgba(76, 78, 97, 0.2);
+    padding: 1.7rem;
+    margin: auto;
+}
+
+.box4 :nth-child(1){
+    margin: 0;
+}
+
+.box4 :nth-child(2){
+    font-weight: 200;
+    font-size: 15px;
+    color: var(--grayish_blue);
+    width: 270px;
+    margin: 0px;
+}
+
+.box4 :nth-child(3){
+    position:absolute;
+    right: 30px;
+    top: 170px;
+}
+
+/*mobile breakpoint*/
+@media (min-width: 29.6875em) {
+    .header h1{
+        font-size: 32px;
+    }
+
+    @media (min-width: 34.125em) {
+        .header p{
+            width: 32.5rem; /*520px*/
+        }
+    }
+}
+
+/*desktop breakpoint*/
+@media (min-width: 976px){
+    .big_box{
+        display: grid;
+        width: 100%;
+        height: 34.375rem; /*550px;*/
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "one two"
+        "three four";
+
+        justify-items: center;
+    }
+    
+    .Box1{
+        width: 20rem;
+        height: 16.25rem;
+    }
+
+    .Box2{
+        width: 20rem;
+        height: 16.25rem;
+    }
+
+    .Box3{
+        width: 20rem;
+        height: 16.25rem;
+    }
+
+    .box1{
+        grid-area: one;
+    }
+
+    .box2{
+        grid-area: two;
+    }
+
+    .box3{
+        grid-area: three;
+    }
+
+    .box4{
+        grid-area: four;
+    }
+
+}
+
+@media (min-width: 68.75em /*1100px*/) {
+    .big_box{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .big_box .Box1, .Box2{
+        margin-right: 20px;
+    }
+
+    .Box1{
+        display: flex;
+        height: 34.375rem; /*550px;*/
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Box2{
+        height: 34.375rem; /*550px;*/
+    }
+
+    .Box3{
+        display: flex;
+        height: 34.375rem; /*550px;*/
+        align-items: center;
+    }
+}
